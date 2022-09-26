@@ -46,3 +46,31 @@
         <div>{{firstname}}</div>
     {{/with}}
 {{/each}}
+
+<h2>Lookup</h2>
+
+{{#each arrayComplex.orders}}
+    <div>{{id}} | {{restaurant.id}}</div>
+    {{log @root.arrayComplex.restaurants}}
+    {{#with (lookup @root.arrayComplex.restaurants restaurant.id)}}
+        <div>Title: {{title}}</div>
+    {{/with}}
+    {{#with (lookup @root.arrayComplex.clients client.id)}}
+        <div>Title: {{title}}</div>
+    {{/with}}
+    {{#with (lookup @root.arrayComplex.adresses restaurant.address.id)}}
+        <div>City: {{city}}</div>
+    {{/with}}
+{{/each}}
+
+<h2>Logs (see terminal)</h2>
+
+{{log "debug logging" level="debug"}}
+{{log "info logging" level="info"}}
+{{log "info logging is the default"}}
+{{log "logging a warning" level="warn"}}
+{{log "logging an error" level="error"}}
+
+{{log numbers}}
+{{log arrayTest}}
+{{log arrayObjectTest}}

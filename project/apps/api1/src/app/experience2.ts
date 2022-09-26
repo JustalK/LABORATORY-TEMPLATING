@@ -39,6 +39,37 @@ router.get('/helpers', (req, res) => {
         firstname: 'alive',
       },
     ],
+    arrayComplex: {
+      orders: [
+        {
+          id: 'o1',
+          restaurant: {
+            id: 'r1',
+            address: {
+              id: 'a1',
+            },
+          },
+          client: {
+            id: 'c1',
+          },
+        },
+      ],
+      clients: {
+        c1: {
+          title: 'Mister',
+        },
+      },
+      restaurants: {
+        r1: {
+          title: 'My Restaurant',
+        },
+      },
+      adresses: {
+        a1: {
+          city: 'Paris',
+        },
+      },
+    },
   });
 });
 
