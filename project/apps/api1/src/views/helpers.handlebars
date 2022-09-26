@@ -1,0 +1,48 @@
+<h1>Page: Home</h1>
+
+<div>
+    {{name}}<br />
+    {{numbers}}
+</div>
+
+{{#if (name)}}
+<span>I have a name!</span>
+{{/if}}<br />
+
+{{#unless (name)}}
+<span>I have NOT a name! {name}</span>
+{{/unless}}<br />
+
+{{#if numbers includeZero=true}}
+<span>I have a numbers with 0</span>
+{{/if}}<br />
+
+{{#unless numbers includeZero=true}}
+<span>I have NOT a numbers with 0</span>
+{{/unless}}<br />
+
+{{#if numbers}}
+<span>I have a numbers without 0</span>
+{{/if}}<br />
+
+{{#if cond}}
+<span>I have a condition validated</span>
+{{else}}
+<span>I have a condition else, not validated</span>
+{{/if}}<br />
+
+<h2>Array #each</h2>
+
+{{#each arrayTest}} <div>{{@index}}: {{this}}</div> {{/each}}
+
+{{#each arrayObjectTest}}
+    <div>{{this.firstname}}</div>
+{{/each}}
+
+<h2>Deconstruction with #with</h2>
+
+{{#each arrayObjectTest}}
+    {{#with this}}
+        <div>{{firstname}}</div>
+    {{/with}}
+{{/each}}

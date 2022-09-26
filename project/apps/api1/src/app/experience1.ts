@@ -14,4 +14,9 @@ router.get('/1', (_req: express.Request, res: express.Response) => {
   res.send(template({ name: 'Nils' }));
 });
 
+router.get('/2', (_req: express.Request, res: express.Response) => {
+  const template = Handlebars.compile('Name: {{name}}');
+  res.send(template({ name: 'Nils' }));
+});
+
 module.exports = router;
