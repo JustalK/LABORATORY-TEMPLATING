@@ -73,4 +73,8 @@ router.get('/helpers', (req, res) => {
   });
 });
 
+router.get('/metadata', (req, res) => {
+  res.render('metadata', { layout: false });
+});
+
 module.exports = router;
