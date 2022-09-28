@@ -21,8 +21,16 @@ const hbs = create({
 });
 
 //app.engine('handlebars', engine());
-//app.engine('.hbs', engine({extname: '.hbs'}));
-app.engine('handlebars', hbs.engine);
+//app.engine('handlebars', hbs.engine);
+app.engine(
+  'handlebars',
+  engine({
+    extname: '.handlebars',
+    partialsDir: './apps/api1/src/views/partials/',
+    defaultLayout: 'main',
+    layoutsDir: './apps/api1/src/views/layouts/',
+  })
+);
 app.set('view engine', 'handlebars');
 app.set('views', 'apps/api1/src/views');
 

@@ -77,4 +77,8 @@ router.get('/metadata', (req, res) => {
   res.render('metadata', { layout: false });
 });
 
+router.get('/partials', (req, res) => {
+  res.render('partials', { layout: false });
+});
+
 module.exports = router;
