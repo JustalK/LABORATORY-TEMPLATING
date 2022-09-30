@@ -1,8 +1,26 @@
 <h1>Page: Partials</h1>
-<span>
+<div>
     {{> ptest }}
-</span>
+</div>
+<div>
+    {{#> ptest }}
+    Not show
+    {{/ptest}}
+</div>
+<br />
 
-<span>
+<div>
     {{> ptest2 value1="testvalue1" value2="testvalue2" }}
-</span>
+</div><br />
+
+<div>
+{{#> failPartial }}
+Failover
+{{/failPartial}}
+</div><br />
+
+<div>
+    {{#> ptest3 }}
+        (This is inside partials page)
+    {{/ptest3 }}
+</div><br />
