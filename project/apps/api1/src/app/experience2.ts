@@ -81,4 +81,12 @@ router.get('/partials', (req, res) => {
   res.render('partials', { layout: false });
 });
 
+router.get('/expressions', (req, res) => {
+  res.render('expressions', {
+    arrayTest: ['Test 1', 'Test 2', 'Test 3'],
+    url: '&',
+    layout: false,
+  });
+});
+
 module.exports = router;
