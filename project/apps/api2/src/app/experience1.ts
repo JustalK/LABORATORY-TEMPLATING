@@ -13,4 +13,11 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
+router.get('/variables', (req, res) => {
+  res.render('variables', {
+    title: 'Test Title',
+    username: 'Kevin Justal',
+  });
+});
+
 module.exports = router;
