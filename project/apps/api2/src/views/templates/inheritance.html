@@ -1,0 +1,18 @@
+{% extends "parent.html" %}
+
+<div>
+{% block example %}
+This is the example block inside
+{% endblock %}
+</div>
+
+<div>
+With super:
+</div>
+
+<div>
+    {% block example2 %}
+    This is the example block inside
+    {{ super() }}
+    {% endblock %}
+</div>

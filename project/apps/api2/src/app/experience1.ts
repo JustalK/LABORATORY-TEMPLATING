@@ -20,4 +20,11 @@ router.get('/variables', (req, res) => {
   });
 });
 
+router.get('/inheritance', (req, res) => {
+  res.render('inheritance', {
+    title: 'Test Title',
+    username: 'Kevin Justal',
+  });
+});
+
 module.exports = router;
