@@ -3,3 +3,28 @@
 This is a true variable
 {% endif %}
 </div>
+
+<div>
+    {% if not variableTrue %}
+    This should not be shown
+    {% endif %}
+</div>
+
+<div>
+    {% if not variableTrue %}
+    This should not be shown
+    {% else %}
+    This is a else
+    {% endif %}
+</div>
+
+<div>
+    {% for item in array %}
+        <div>
+        {{ loop.index }} - {{ item }} - {{ loop.length }}
+        </div>
+    {% endfor %}
+</div>
+
+{% import "macro.html" as m %}
+{{ m.exampleMacro('Kevin') }}

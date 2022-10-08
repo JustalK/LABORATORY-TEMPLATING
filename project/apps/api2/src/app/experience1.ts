@@ -31,6 +31,7 @@ router.get('/tags', (req, res) => {
   res.render('tags', {
     variableTrue: true,
     variableFalse: false,
+    array: ['uno', 'dos', 'tres'],
   });
 });
 
