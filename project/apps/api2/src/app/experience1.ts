@@ -27,4 +27,11 @@ router.get('/inheritance', (req, res) => {
   });
 });
 
+router.get('/tags', (req, res) => {
+  res.render('tags', {
+    variableTrue: true,
+    variableFalse: false,
+  });
+});
+
 module.exports = router;
