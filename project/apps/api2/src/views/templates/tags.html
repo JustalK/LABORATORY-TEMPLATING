@@ -28,3 +28,25 @@ This is a true variable
 
 {% import "macro.html" as m %}
 {{ m.exampleMacro('Kevin') }}
+
+
+{% raw %}{{}}{% endraw %}
+
+<div>
+{% filter replace("name", "kevin") %}
+This is my name
+{% endfilter %}
+</div>
+
+{# Test of comment #}
+
+<div>
+{% for i in [1,2,3,4,5] -%}
+{{ i }}
+{%- endfor %}
+</div>
+<div>
+    {% for i in [1,2,3,4,5] %}
+    {{ i }}
+    {% endfor %}
+</div>
