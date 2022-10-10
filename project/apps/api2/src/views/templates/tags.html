@@ -5,6 +5,12 @@ This is a true variable
 </div>
 
 <div>
+    {% if (10 === 10 and 11 === 10) or variableTrue %}
+    This should be shown
+    {% endif %}
+</div>
+
+<div>
     {% if not variableTrue %}
     This should not be shown
     {% endif %}
@@ -39,6 +45,16 @@ This is my name
 </div>
 
 {# Test of comment #}
+
+<div>
+{% set regExp = r/^kevin.*/g %}
+{% if regExp.test('kevin') %}
+Kevin found!
+{% endif %}
+{% if regExp.test('Kevin') %}
+Kevin should not be found! (case sensible)
+{% endif %}
+</div>
 
 <div>
 {% for i in [1,2,3,4,5] -%}
